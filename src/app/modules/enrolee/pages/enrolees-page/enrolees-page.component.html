@@ -1,0 +1,18 @@
+<div class="row">
+    <section class="panel panel-default">
+        <legend>Enrolee List</legend>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <app-enrolee-list
+                    *ngIf="enroleeList"
+                    [enroleeListData]="enroleeList"
+                ></app-enrolee-list>
+            </div>
+
+            <div class="col-sm-6">
+                <app-enrolee-details></app-enrolee-details>
+            </div>
+        </div>
+    </section>
+</div>

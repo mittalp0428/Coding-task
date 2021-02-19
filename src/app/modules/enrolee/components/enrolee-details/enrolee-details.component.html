@@ -1,0 +1,16 @@
+<div class="form-horizontal" *ngIf="enroleeDetail | async as enrolee">
+    <h3>Enrolee Detail</h3>
+
+    <br>
+    <label class="col-xs-4 control-label">ID: </label>
+    <p class="form-control-static">{{ enrolee[0].id }}</p>
+
+    <label class="col-xs-4 control-label">NAME:</label>
+    <p class="form-control-static"><input type="text" value= {{enrolee[0].name}} (change)="nameChangeHandler($event, enrolee[0])" /></p>
+
+    <label class="col-xs-4 control-label">Status</label>
+    <p class="form-control-static"><input type="checkbox" name="status" [checked]=enrolee[0].active (change)="statusChangeHandler($event, enrolee[0])" /></p>
+
+    <label class="col-xs-4 control-label">Date Of Birth:</label>
+    <p class="form-control-static">{{ enrolee[0].dateOfBirth }}</p>
+</div>

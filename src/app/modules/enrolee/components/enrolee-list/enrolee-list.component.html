@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Enrolee List</h3>
+    </div>
+
+    <table class="table table-hover" id="dev-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Active</th>
+                <th>DOB</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr
+                *ngFor='let enrolee of enroleeListData'
+                class="tableRow"
+                (click)="showEmployeeDetails(enrolee.id)"
+            >
+                <td>{{ enrolee.id }}</td>
+                <td>{{ enrolee.name }}</td>
+                <td><input type="checkbox" name="status" [disabled]=true [checked]=enrolee.active /></td>
+                <td>{{ enrolee.dateOfBirth }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
